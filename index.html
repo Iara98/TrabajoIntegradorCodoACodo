@@ -46,7 +46,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-success">Comprar tickets</a>
+                        <a href="./php/comprar-tickets.html" class="nav-link text-success">Comprar tickets</a>
                     </li>
                 </ul>
             </div>
@@ -67,11 +67,11 @@
                 aria-label="Slide 3"></button>
         </div>
 
-        <div class="carousel-inner">
+        <div class="carousel-inner ">
 
-            <div class="carousel-item active">
+            <div class="carousel-item active ">
 
-                <img src="./img/hawaii.jpg" class="d-block w-100 opacity-75" alt="">
+                <img src="./img/hawaii.jpg" class="d-block w-100 opacity-60" alt="">
 
                 <div class="carousel-caption text-end display-6">
 
@@ -200,7 +200,7 @@
 
     <!--Bs As Octubre-->
 
-    <div class="card mb-3" style="max-width: 100%;">
+    <div class="card mb-3 bg-dark text-white" style="max-width: 100%;">
         <div class="row g-0">
             <div class="col-md-4">
                 <img src="./img/ba1.jpg" class="img-fluid rounded-start max-width: 50%" alt="">
@@ -217,7 +217,7 @@
                         una ciudad-
                         condado consolidada que cubre toda la ciudad (aproximadamente 600 km de superficie).
                     </p>
-                    <a href="#" class="btn btn-outline-dark">Conoce mas</a>
+                    <a href="#" class="btn btn-outline-dark bg-transparent btn-default text-white">Conoce mas</a>
                 </div>
             </div>
         </div>
@@ -233,31 +233,36 @@
             <p class="fs-5">Anotate como orador para dar una charla ignite. Cuentanos de que quieres hablar!</p>
         </div>
 
-        <form action="">
+        <form method="post" action="">
 
             <div class="mb-3">
-                <input type="nombre" class="form-control" id="FormControlInput1" placeholder="Nombre">
+                <input type="nombre" name='nombre' class="form-control" id="FormControlInput1" placeholder="Nombre">
             </div>
 
             <div class="mb-3">
-                <input type="apellido" class="form-control" id="FormControlInput1" placeholder="Apellido">
+                <input type="apellido" name='apellido' class="form-control" id="FormControlInput1" placeholder="Apellido">
             </div>
 
             <div class="mb-3">
-                <textarea class="form-control" id="FormControlTexarea1" rows="3"
+                <textarea class="form-control" name='charla' id="FormControlTexarea1" rows="3"
                     placeholder="Sobre que quieres hablar?"></textarea>
             </div>
+
+            <h6>Recuerda incluir un titulo para tu charla</h6>
+
+            <div class="mb-3">
+                <button name="enviar" class="btn btn-success w-100 fs-5">Enviar</button>
+            </div>
+
         </form>
-
-        <h6>Recuerda incluir un titulo para tu charla</h6>
-
-        <div class="mb-3">
-            <button class="btn btn-success w-100 fs-5">Enviar</button>
-        </div>
 
     </div>
 
-    <footer class="w-100 d-flex align-items justify-content-center flex-wrap">
+    <?php
+    include("registrar.php");
+    ?>
+
+    <footer class="w-100 d-flex align-items justify-content-center flex-wrap bg-dark text-white">
         <div class="row align-items-start w-100">
             <div class="col">
                 Preguntas <br> frecuentes
